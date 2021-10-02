@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Project Macro</title> <!-- Title of the Webpage-->
+        <meta charset="UTF-8"> <!-- Implements what character set to be used, UTF-8 covers almost everything! -->
+        <meta name="viewport" content="width=device-width, intial-scale=1.0"> <!-- Defines screen width and scale -->
+        <!-- Creates and implements a favicon in the main site. -->
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+        <link rel="manifest" href="favicon/site.webmanifest">
+    </head>
+    <body>
+        <!-- The header only contains the navbar, which quickly moves you over to your desired section. -->
+        <header>
+            <!-- The navbar for this meeting, also works like our table of contents. -->
+            <nav>
+                <a href="#attendance">Attendance List</a>
+                <a href="#agenda">Agenda</a>
+                <a href="#unfinished">Unfinished Topic</a>
+                <a href="#new">Brainstorming</a>
+                <a href="#misc">Extras</a>
+                <a href="#record">Transcripts</a>
+            </nav>
+        </header>
+
+        <!-- The main contents of the meeting are found here. -->
+        <main>
+            <!-- Main title and purpose of the meeting, as well as the date the meeting took place. -->
+            <h1>Project Macro</h1>
+            <h2>Brainstorm</h2>
+            <h3>October 1, 2021</h3>
+
+            <hr>
+
+            <!-- Attendance list, thankfully everyone came this time.-->
+            <section id="attendance">
+                <h4>Who Attended?</h4>
+                Everyone attended the meeting today, their names are listed below.
+                <ul>
+                    <li>Ludvig</li>
+                    <li>Ana</li>
+                    <li>Blake</li>
+                    <li>Chase</li>
+                    <li>Darryl</li>
+                    <li>Emma</li>
+                </ul>
+            </section>
+
+            <hr>
+
+            <!-- Our agenda, or itinerary, for the day. -->
+            <section id="agenda">
+                <h4>Agenda</h4>
+                <p>Today's agenda is light, since we are still starting off. For today, the agenda is as follows.</p>
+                <ol>
+                    <li>Unfinished Topics</li>
+                    <li>Brainstorming</li>
+                    <li>Extra Comments</li>
+                </ol>
+            </section>
+
+            <hr>
+
+            <!-- This is where our unfinished topics would be... IF WE HAD SOME. -->
+            <section id="unfinished">
+                <h4>Unfinished Topics</h4>
+                <p>We covered everything in the last meeting and no questions were told during the meeting.<br>
+                   Please view last week's meeting notes for more information.</p>
+            </section>
+
+            <hr>
+
+            <!-- Brainstorming session, came up with the base for the project. -->
+            <section id="new">
+                <h4>Brainstorming</h4>
+                <div>
+                    <p>There were some new ideas about the project, we mainly thought big here and started laying <br>
+                       out what the project may need. We were able to get this rough skeleton after each person wrote <br>
+                       down what they though was necessary to the project.</p>
+
+                    <img src="needed.jpg" alt="Crucial steps needed to create out project.">
+                    
+                    <details>
+                        <summary>If you can't see the image, click here for steps with more detail.</summary>
+                        <ol>
+                            <li>Create a database that is able to hold our users.</li>
+                            <li>Encrypt their information, so that their data doesn't get revealed.</li>
+                            <li>Set up security protocols for our site, since we will handle sensitive info.</li>
+                            <li>Design the site to be as clean and efficient as possible.</li>
+                            <li>Make sure the site is user-friendly, what good is a website if it is inaccessible?</li>
+                            <li>Add details/style and clean up the site after the core pieces are put in place.</li>
+                        </ol>
+                    </details>
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- Extra Comments, either related or not to the project. -->
+            <section id="misc">
+                <h4>Extra Comments (Q & A)</h4>
+                <p>Some questions were asked after the meeting. The questions are listed down below.</p>
+
+                <details>
+                    <summary>When are we going to start coding on the project?</summary>
+                    We will be starting the coding part in about 2-3 weeks, the latest.
+                </details>
+
+                <details>
+                    <summary>Why do we have to wait so long to start coding?</summary>
+                    We need to make a thorough plan before we move forward. What's the point of jumping into the code <br>
+                    if we don't even know what <em>exactly</em> we need to code? We don't want to start coding and realize <br>
+                    that we added something extra and then delete it, or that we half-assed the code and added something too <br>
+                    basic or quickly without thinking.
+                </details>
+
+                <details>
+                    <summary>Your name sounds very similar. Is it like the composer?</summary>
+                    No, my name is <strong>Ludvig</strong>, with a <b>v</b>. My name is <strong>not</strong> like the composer. <br>
+                    And no, it's not like the streamer either.
+                </details>
+            </section>
+
+            <hr>
+
+            <section id="record">
+                <h4>Transcripts</h4>
+                <label>Audio transcript of the Q&A section.</label> <br>
+                <audio controls src="QA_Audio.m4a">Sorry, your browser doesn't support the audio element.</audio> <br>
+
+                <label>Video transcript of the Q&A section.</label> <br>
+                <video controls src="QA_Video.mp4">Sorry, your browser doesn't support embedded videos.</video>
+            </section>
+
+            <hr>
+        </main>
+        <footer>
+            <!-- This form is used to send people the meeting minutes via email. (Only skeleton created, sends to no one)-->
+            <p>If you want to get the next meeting minutes whenever they are released, please fill out the form below.</p>
+            <form>
+                <fieldset>
+                    <legend>Meeting Minutes Form</legend>
+
+                    <!-- Name region, only can choose the names of those who are with the company. -->
+                    <label for="name">Name:</label>
+                    <select name="names" id="name">
+                        <option value="">--Select your name--</option>
+                        <option value="L">Ludvig</option>
+                        <option value="A">Ana</option>
+                        <option value="B">Blake</option>
+                        <option value="C">Chase</option>
+                        <option value="D">Darryl</option>
+                        <option value="E">Emma</option>
+                    </select> <br>
+
+                    <!-- Email text box -->
+                    <label for="email">Email:</label>
+                    <input type="text" name="email"> <br>
+
+                    <!-- Date input for today -->
+                    <label for="date">Date:</label>
+                    <input type="date" name="date"> <br>
+
+                    <!-- Datalist response for meeting. -->
+                    <label for="review">If you came to the meeting, did you like what was covered?</label>
+                    <input list="response" name="review">
+
+                    <datalist id="response">
+                        <option value="Yes">
+                        <option value="No">
+                        <option value="N/A">
+                    </datalist> <br>
+
+                    <!-- Textarea given for why the meeting wasn't good. -->
+                    <label for="why">If you said "No" above, please let us know what could have been better.</label> <br>
+                    <textarea id="why" name="why"></textarea> <br>
+
+                    <!-- Radio choices for why someone wants these notes. -->
+                    <label for="reason">Why do you want to get these meeting minutes?</label> <br>
+                    <input type="radio" name="review">
+                    <label for="review">Reviewing notes in my spare time</label> <br>
+
+                    <input type="radio" name="miss">
+                    <label for="miss">In case I miss a future meeting</label> <br>
+
+                    <input type="radio" name="text">
+                    <label for="text">I just want the text transcripts and not the meeting itself</label> <br><br>
+
+                    <!-- Checkbox if they want to be automatically sent next meeting notes. -->
+                    <input type="checkbox" name="mm">
+                    <label for="mm">I would like to be sent future meeting minutes whenever they are released.</label> <br>
+
+                    <!-- Submit button that sends it to the mailing list. (TODO: Not Implemented Yet)-->
+                    <button type="submit">Submit</button>
+                </fieldset>
+            </form>
+
+            <!-- Closing footer with additional information. -->
+            <p>This week's edition of meeting minutes was written by the head speaker, Ludvig. <br>
+               Any additional questions or concerns regarding this meeting can be addressed by contacting 
+               <b>FAKE NUMBERS</b> [<i>(325) 368-6237</i>]</p>
+        </footer>
+    </body>
+</html>
