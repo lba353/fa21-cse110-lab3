@@ -156,15 +156,15 @@
 
                     <!-- Email text box -->
                     <label for="email">Email:</label>
-                    <input type="text" name="email"> <br>
+                    <input type="text" id="email"> <br>
 
                     <!-- Date input for today -->
                     <label for="date">Date:</label>
-                    <input type="date" name="date"> <br>
+                    <input type="date" id="date"> <br>
 
                     <!-- Datalist response for meeting. -->
                     <label for="review">If you came to the meeting, did you like what was covered?</label>
-                    <input list="response" name="review">
+                    <input list="response" id="review">
 
                     <datalist id="response">
                         <option value="Yes">
@@ -174,21 +174,21 @@
 
                     <!-- Textarea given for why the meeting wasn't good. -->
                     <label for="why">If you said "No" above, please let us know what could have been better.</label> <br>
-                    <textarea id="why" name="why"></textarea> <br>
+                    <textarea id="why"></textarea> <br>
 
                     <!-- Radio choices for why someone wants these notes. -->
-                    <label for="reason">Why do you want to get these meeting minutes?</label> <br>
-                    <input type="radio" name="review">
+                    <label id="reason">Why do you want to get these meeting minutes?</label> <br>
+                    <input type="radio" id="review">
                     <label for="review">Reviewing notes in my spare time</label> <br>
 
-                    <input type="radio" name="miss">
+                    <input type="radio" id="miss">
                     <label for="miss">In case I miss a future meeting</label> <br>
 
-                    <input type="radio" name="text">
+                    <input type="radio" id="text">
                     <label for="text">I just want the text transcripts and not the meeting itself</label> <br><br>
 
                     <!-- Checkbox if they want to be automatically sent next meeting notes. -->
-                    <input type="checkbox" name="mm">
+                    <input type="checkbox" id="mm">
                     <label for="mm">I would like to be sent future meeting minutes whenever they are released.</label> <br>
 
                     <!-- Submit button that sends it to the mailing list. (TODO: Not Implemented Yet)-->
