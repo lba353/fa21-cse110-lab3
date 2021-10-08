@@ -1,0 +1,63 @@
+/* Sets all font to the imported Google Font and aligns all the text. */
+* {
+    font-family: 'Gemunu Libre', sans-serif;
+    text-align: center;
+    background-color: hsl(195, 53%, 79%);
+}
+
+/* Displays the lists as a table and automatically aligns the margins. */
+ul, ol {
+    display: table;
+    margin: auto;
+}
+
+/* Any item inside a list gets its text aligned back to the right. */
+li { text-align: left; }
+
+/* Sets up a border for the navbar as well as margins and padding. */
+nav {
+    border-style: ridge;
+    border-color: blue;
+    border-width: 1mm;
+    border-radius: 10px;
+    margin: 0% 30% 0% 30%;
+    padding: .1cm 0cm .1cm 0cm
+}
+
+/* The links in the navbar now have proper spacing and no underline underneath. */
+nav > a {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    text-decoration: none;
+}
+
+/* If the nav link was visited, have it retain its text color. */
+nav a:visited { color: blue; }
+
+/* If you are hovering over a link, change its color to purple. */
+nav a:hover { color: rgb(183, 0, 255); }
+
+nav a:active { color:#7c0000; }
+
+/* Underlining all of the subtitles for more clarity. */
+.secTitle {text-decoration: underline; }
+
+/* Setting up the flexbox for the Q&A section. */
+#imgContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-left: 20%;
+    margin-right: 20%
+}
+
+/* Making the image responsive. */
+#imgContainer img {
+    max-width: 40%;
+    height: auto;
+}
+
+/* Setting up the grid for the form. */
+form {
+    display: grid;
+}

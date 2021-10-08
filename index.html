@@ -9,6 +9,12 @@
         <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
         <link rel="manifest" href="favicon/site.webmanifest">
+        <!-- Implementing a new font from Google Fonts. -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@300&display=swap" rel="stylesheet">
+        <!-- Link to the style sheet. -->
+        <link rel="stylesheet" href="index.css">
     </head>
     <body>
         <!-- The header only contains the navbar, which quickly moves you over to your desired section. -->
@@ -35,7 +41,7 @@
 
             <!-- Attendance list, thankfully everyone came this time.-->
             <section id="attendance">
-                <h4>Who Attended?</h4>
+                <h4 class="secTitle">Who Attended?</h4>
                 Everyone attended the meeting today, their names are listed below.
                 <ul>
                     <li>Ludvig</li>
@@ -51,7 +57,7 @@
 
             <!-- Our agenda, or itinerary, for the day. -->
             <section id="agenda">
-                <h4>Agenda</h4>
+                <h4 class="secTitle">Agenda</h4>
                 <p>Today's agenda is light, since we are still starting off. For today, the agenda is as follows.</p>
                 <ol>
                     <li>Unfinished Topics</li>
@@ -64,7 +70,7 @@
 
             <!-- This is where our unfinished topics would be... IF WE HAD SOME. -->
             <section id="unfinished">
-                <h4>Unfinished Topics</h4>
+                <h4 class="secTitle">Unfinished Topics</h4>
                 <p>We covered everything in the last meeting and no questions were told during the meeting.<br>
                    Please view last week's meeting notes for more information.</p>
             </section>
@@ -73,12 +79,12 @@
 
             <!-- Brainstorming session, came up with the base for the project. -->
             <section id="new">
-                <h4>Brainstorming</h4>
-                <div>
-                    <p>There were some new ideas about the project, we mainly thought big here and started laying <br>
-                       out what the project may need. We were able to get this rough skeleton after each person wrote <br>
-                       down what they though was necessary to the project.</p>
+                <h4 class="secTitle">Brainstorming</h4>
+                <p>There were some new ideas about the project, we mainly thought big here and started laying <br>
+                   out what the project may need. We were able to get this rough skeleton after each person wrote <br>
+                   down what they though was necessary to the project.</p>
 
+                <div id="imgContainer">
                     <img src="needed.jpg" alt="Crucial steps needed to create out project.">
                     
                     <details>
@@ -99,7 +105,7 @@
 
             <!-- Extra Comments, either related or not to the project. -->
             <section id="misc">
-                <h4>Extra Comments (Q & A)</h4>
+                <h4 class="secTitle">Extra Comments (Q & A)</h4>
                 <p>Some questions were asked after the meeting. The questions are listed down below.</p>
 
                 <details>
@@ -125,7 +131,7 @@
             <hr>
 
             <section id="record">
-                <h4>Transcripts</h4>
+                <h4 class="secTitle">Transcripts</h4>
                 <label>Audio transcript of the Q&A section.</label> <br>
                 <audio controls src="QA_Audio.m4a">Sorry, your browser doesn't support the audio element.</audio> <br>
 
@@ -142,57 +148,59 @@
                 <fieldset>
                     <legend>Meeting Minutes Form</legend>
 
-                    <!-- Name region, only can choose the names of those who are with the company. -->
-                    <label for="name">Name:</label>
-                    <select name="names" id="name">
-                        <option value="">--Select your name--</option>
-                        <option value="L">Ludvig</option>
-                        <option value="A">Ana</option>
-                        <option value="B">Blake</option>
-                        <option value="C">Chase</option>
-                        <option value="D">Darryl</option>
-                        <option value="E">Emma</option>
-                    </select> <br>
+                    <div id="form">
+                        <!-- Name region, only can choose the names of those who are with the company. -->
+                        <label for="name">Name:</label>
+                        <select name="names" id="name">
+                            <option value="">--Select your name--</option>
+                            <option value="L">Ludvig</option>
+                            <option value="A">Ana</option>
+                            <option value="B">Blake</option>
+                            <option value="C">Chase</option>
+                            <option value="D">Darryl</option>
+                            <option value="E">Emma</option>
+                        </select> <br>
 
-                    <!-- Email text box -->
-                    <label for="email">Email:</label>
-                    <input type="text" id="email"> <br>
+                        <!-- Email text box -->
+                        <label for="email">Email:</label>
+                        <input type="text" id="email"> <br>
 
-                    <!-- Date input for today -->
-                    <label for="date">Date:</label>
-                    <input type="date" id="date"> <br>
+                        <!-- Date input for today -->
+                        <label for="date">Date:</label>
+                        <input type="date" id="date"> <br>
 
-                    <!-- Datalist response for meeting. -->
-                    <label for="review">If you came to the meeting, did you like what was covered?</label>
-                    <input list="response" id="review">
+                        <!-- Datalist response for meeting. -->
+                        <label for="review">If you came to the meeting, did you like what was covered?</label>
+                        <input list="response" id="review">
 
-                    <datalist id="response">
-                        <option value="Yes">
-                        <option value="No">
-                        <option value="N/A">
-                    </datalist> <br>
+                        <datalist id="response">
+                            <option value="Yes">
+                            <option value="No">
+                            <option value="N/A">
+                        </datalist> <br>
 
-                    <!-- Textarea given for why the meeting wasn't good. -->
-                    <label for="why">If you said "No" above, please let us know what could have been better.</label> <br>
-                    <textarea id="why"></textarea> <br>
+                        <!-- Textarea given for why the meeting wasn't good. -->
+                        <label for="why">If you said "No" above, please let us know what could have been better.</label> <br>
+                        <textarea id="why"></textarea> <br>
 
-                    <!-- Radio choices for why someone wants these notes. -->
-                    <label id="reason">Why do you want to get these meeting minutes?</label> <br>
-                    <input type="radio" id="recap">
-                    <label for="recap">Reviewing notes in my spare time</label> <br>
+                        <!-- Radio choices for why someone wants these notes. -->
+                        <label id="reason">Why do you want to get these meeting minutes?</label> <br>
+                        <input type="radio" id="recap">
+                        <label for="recap">Reviewing notes in my spare time</label> <br>
 
-                    <input type="radio" id="miss">
-                    <label for="miss">In case I miss a future meeting</label> <br>
+                        <input type="radio" id="miss">
+                        <label for="miss">In case I miss a future meeting</label> <br>
 
-                    <input type="radio" id="text">
-                    <label for="text">I just want the text transcripts and not the meeting itself</label> <br><br>
+                        <input type="radio" id="text">
+                        <label for="text">I just want the text transcripts and not the meeting itself</label> <br><br>
 
-                    <!-- Checkbox if they want to be automatically sent next meeting notes. -->
-                    <input type="checkbox" id="mm">
-                    <label for="mm">I would like to be sent future meeting minutes whenever they are released.</label> <br>
+                        <!-- Checkbox if they want to be automatically sent next meeting notes. -->
+                        <input type="checkbox" id="mm">
+                        <label for="mm">I would like to be sent future meeting minutes whenever they are released.</label> <br>
 
-                    <!-- Submit button that sends it to the mailing list. (TODO: Not Implemented Yet)-->
-                    <button type="submit">Submit</button>
+                        <!-- Submit button that sends it to the mailing list. (TODO: Not Implemented Yet)-->
+                        <button type="submit">Submit</button>
+                    </div>
                 </fieldset>
             </form>
 
