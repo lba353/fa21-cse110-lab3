@@ -42,7 +42,7 @@
             <!-- Attendance list, thankfully everyone came this time.-->
             <section id="attendance">
                 <h4 class="secTitle">Who Attended?</h4>
-                Everyone attended the meeting today, their names are listed below.
+                <p>Everyone attended the meeting today, their names are listed below.</p>
                 <ul>
                     <li>Ludvig</li>
                     <li>Ana</li>
@@ -148,58 +148,74 @@
                 <fieldset>
                     <legend>Meeting Minutes Form</legend>
 
-                    <div id="form">
+                    <div id="formC">
                         <!-- Name region, only can choose the names of those who are with the company. -->
-                        <label for="name">Name:</label>
-                        <select name="names" id="name">
-                            <option value="">--Select your name--</option>
-                            <option value="L">Ludvig</option>
-                            <option value="A">Ana</option>
-                            <option value="B">Blake</option>
-                            <option value="C">Chase</option>
-                            <option value="D">Darryl</option>
-                            <option value="E">Emma</option>
-                        </select> <br>
+                        <div id="nameC">
+                            <label for="name">Name:</label>
+                            <select name="names" id="name">
+                                <option value="">--Select your name--</option>
+                                <option value="L">Ludvig</option>
+                                <option value="A">Ana</option>
+                                <option value="B">Blake</option>
+                                <option value="C">Chase</option>
+                                <option value="D">Darryl</option>
+                                <option value="E">Emma</option>
+                            </select>
+                        </div>
 
                         <!-- Email text box -->
-                        <label for="email">Email:</label>
-                        <input type="text" id="email"> <br>
+                        <div id="emailC">
+                            <label for="email">Email:</label>
+                            <input type="text" id="email">
+                        </div>
 
                         <!-- Date input for today -->
-                        <label for="date">Date:</label>
-                        <input type="date" id="date"> <br>
+                        <div id="dateC">
+                            <label for="date">Date:</label>
+                            <input type="date" id="date"> 
+                        </div>
 
                         <!-- Datalist response for meeting. -->
-                        <label for="review">If you came to the meeting, did you like what was covered?</label>
-                        <input list="response" id="review">
+                        <div id="responseC">
+                            <label for="review">If you came to the meeting, did you like what was covered?</label>
+                            <input list="response" id="review">
 
-                        <datalist id="response">
-                            <option value="Yes">
-                            <option value="No">
-                            <option value="N/A">
-                        </datalist> <br>
+                            <datalist id="response">
+                                <option value="Yes">
+                                <option value="No">
+                                <option value="N/A">
+                            </datalist>
+                        </div> 
 
                         <!-- Textarea given for why the meeting wasn't good. -->
-                        <label for="why">If you said "No" above, please let us know what could have been better.</label> <br>
-                        <textarea id="why"></textarea> <br>
+                        <div id="whyC">
+                            <label for="why">If you said "No" above, please let us know what could have been better.</label> <br>
+                            <textarea id="why"></textarea>
+                        </div>
 
                         <!-- Radio choices for why someone wants these notes. -->
-                        <label id="reason">Why do you want to get these meeting minutes?</label> <br>
-                        <input type="radio" id="recap">
-                        <label for="recap">Reviewing notes in my spare time</label> <br>
+                        <div id="reasonC">
+                            <label id="reason">Why do you want to get these meeting minutes?</label> <br>
+                            <input type="radio" id="recap">
+                            <label for="recap">Reviewing notes in my spare time</label> <br>
 
-                        <input type="radio" id="miss">
-                        <label for="miss">In case I miss a future meeting</label> <br>
+                            <input type="radio" id="miss">
+                            <label for="miss">In case I miss a future meeting</label> <br>
 
-                        <input type="radio" id="text">
-                        <label for="text">I just want the text transcripts and not the meeting itself</label> <br><br>
+                            <input type="radio" id="text">
+                            <label for="text">I just want the text transcripts and not the meeting itself</label>
+                        </div>
 
                         <!-- Checkbox if they want to be automatically sent next meeting notes. -->
-                        <input type="checkbox" id="mm">
-                        <label for="mm">I would like to be sent future meeting minutes whenever they are released.</label> <br>
+                        <div id="mmC">
+                            <input type="checkbox" id="mm">
+                            <label for="mm">I would like to be sent future meeting minutes whenever they are released.</label>
+                        </div>
 
                         <!-- Submit button that sends it to the mailing list. (TODO: Not Implemented Yet)-->
-                        <button type="submit">Submit</button>
+                        <div id="buttonC">
+                            <button type="submit">Submit</button>
+                        </div>
                     </div>
                 </fieldset>
             </form>
